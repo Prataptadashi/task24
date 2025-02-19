@@ -1,0 +1,255 @@
+/* Global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog List - Fixed 3x2 Grid Layout */
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(2, auto); /* Two rows */
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  padding-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .blog-list {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-list {
+    grid-template-columns: repeat(1, 1fr); /* One column on small screens */
+    grid-template-rows: auto;
+  }
+}
+/* Blog Card - Bigger Size */
+.blog-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 80px;
+  padding: 80px; /* Increased padding */
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px; /* Increased height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Blog Title - Bigger Font */
+.blog-title {
+  font-size: 2rem; /* Bigger title */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Blog Author */
+.blog-author {
+  font-size: 1.2rem; /* Increased size */
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+/* Blog Content */
+.blog-content {
+  font-size: 1.1rem; /* Slightly bigger */
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+/* Improved Buttons */
+.edit-button, .delete-button {
+  padding: 10px 15px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+
+/* Edit Button */
+.edit-button {
+  background: linear-gradient(90deg, #ffcc00, #ff8800);
+  color: white;
+  box-shadow: 0px 4px 10px rgba(255, 200, 0, 0.5);
+}
+
+.edit-button:hover {
+  background: linear-gradient(90deg, #ff8800, #ff5500);
+  transform: scale(1.05);
+}
+
+/* Delete Button */
+.delete-button {
+  background: linear-gradient(90deg, #ff4b5c, #d81b3c);
+  color: white;
+  box-shadow: 0px 4px 10px rgba(255, 75, 92, 0.5);
+}
+
+.delete-button:hover {
+  background: linear-gradient(90deg, #d81b3c, #b00020);
+  transform: scale(1.05);
+}
+
+/* Button Container - Centers Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Add Blog Form - Fixed Alignment */
+.add-blog-container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form Styling */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+}
+
+/* Placeholder Styling */
+input::placeholder, textarea::placeholder {
+  color: #ccc;
+  text-align: center;
+}
+
+/* Ensure textarea does not expand */
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Button Full Width */
+.add-button {
+  width: 90%;
+  padding: 12px;
+  margin-top: 10px;
+}
+/* Add Blog Section - Transparent Container */
+.add-blog-wrapper {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent effect */
+  backdrop-filter: blur(15px); /* Glassmorphism */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+.add-blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.add-blog-container input,
+.add-blog-container textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+}
+
+/* Placeholder Styling */
+.add-blog-container input::placeholder,
+.add-blog-container textarea::placeholder {
+  color: #ccc;
+  text-align: center;
+}
+
+/* Prevent Textarea Expansion */
+.add-blog-container textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Add Blog Button */
+.add-blog-container .add-button {
+  width: 90%;
+  background: #00c6ff;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.add-blog-container .add-button:hover {
+  background: #0072ff;
+}
